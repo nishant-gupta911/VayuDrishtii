@@ -1,0 +1,78 @@
+{
+  "best_model": {
+    "name": "XGBoost",
+    "mae": 6.23314971923828,
+    "rmse": 7.754121846619865,
+    "r2": 0.8837653953373839,
+    "parameters": {
+      "colsample_bytree": 0.9,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 300,
+      "subsample": 0.9
+    }
+  },
+  "random_forest_optimized": {
+    "mae": 7.468190476190412,
+    "rmse": 9.843673685116052,
+    "r2": 0.8126797979192272,
+    "parameters": {
+      "max_depth": 10,
+      "max_features": null,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "n_estimators": 300
+    }
+  },
+  "feature_importance": {
+    "aod_550": 0.7828308939933777,
+    "t2m_celsius": 0.03476965054869652,
+    "wind_speed_10m": 0.022700583562254906,
+    "r2m": 0.03363373875617981,
+    "blh": 0.027624407783150673,
+    "lat_cos": 0.05141107738018036,
+    "lat_sin": 2.0721792679978535e-05,
+    "lon_cos": 0.03757798671722412,
+    "lon_sin": 7.749447377136676e-07,
+    "hour": 0.0,
+    "month": 0.004653740208595991,
+    "season": 0.004776399116963148
+  },
+  "dataset_info": {
+    "total_samples": 22,
+    "training_samples": 15,
+    "test_samples": 7,
+    "features_used": [
+      "aod_550",
+      "t2m_celsius",
+      "wind_speed_10m",
+      "r2m",
+      "blh",
+      "lat_cos",
+      "lat_sin",
+      "lon_cos",
+      "lon_sin",
+      "hour",
+      "month",
+      "season"
+    ],
+    "pm25_range": [
+      42.8,
+      118.7
+    ],
+    "pm25_mean": 72.33636363636363,
+    "pm25_std": 18.730101707057276
+  },
+  "xgboost_optimized": {
+    "mae": 6.23314971923828,
+    "rmse": 7.754121846619865,
+    "r2": 0.8837653953373839,
+    "parameters": {
+      "colsample_bytree": 0.9,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 300,
+      "subsample": 0.9
+    }
+  }
+}

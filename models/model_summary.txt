@@ -1,0 +1,30 @@
+🎯 VayuDrishti PM2.5 Prediction Model Results
+==================================================
+
+📊 Training Summary:
+   Dataset size: 22 samples
+   Features used: 8
+   Feature list: aod_550, t2m_celsius, wind_speed_10m, r2m, latitude, longitude, hour, month
+
+🌲 Random Forest Performance:
+   MAE: 9.28 μg/m³
+   RMSE: 12.30 μg/m³
+   R²: 0.708
+
+🚀 XGBoost Performance:
+   MAE: 7.43 μg/m³
+   RMSE: 8.30 μg/m³
+   R²: 0.867
+
+🔍 Feature Importance (Random Forest):
+   aod_550: 0.869
+   t2m_celsius: 0.085
+   r2m: 0.030
+   wind_speed_10m: 0.008
+   latitude: 0.005
+   month: 0.003
+   longitude: 0.000
+   hour: 0.000
+
+💡 Model Insights:
+   • AOD (satellite data) is a strong predictor of PM2.5
