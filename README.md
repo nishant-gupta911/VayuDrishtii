@@ -68,52 +68,42 @@
 ## 🗂️ Project Structure
 
 ```
-VayuDrishti/
-├── 📁 data/                        # Training Datasets
-│   ├── unified/
-│   │   └── cleaned_dataset.csv     # 2-year cleaned dataset (100K+ records)
-│   ├── processed/                  # Intermediate processing files
-│   ├── satellite/                  # Raw satellite AOD data
-│   ├── reanalysis/                 # ERA5 weather data
-│   └── cpcb/                       # Ground truth validation data
+Vayu_Drishti/
+├── assets/                             # Static assets like logos, icons (optional)
+├── dashboard/                          # Main interactive forecasting dashboard (Streamlit)
+│   ├── check_dependencies.py           # Script to verify environment setup
+│   ├── dashboard.py                    # 🚀 Main dashboard UI + logic
+│   ├── install_dependencies.py         # Auto-installer for missing packages
+│   ├── offline_forecast.py             # PM2.5 forecasting logic (offline model)
+│   └── requirements_dashboard.txt      # Dashboard-specific dependencies
 │
-├── 📁 models/                       # Trained Models & Metrics
-│   ├── best_model.pkl              # Optimized XGBoost model (279KB)
-│   ├── model_metrics.json          # Performance evaluation
-│   ├── feature_importance.png      # Variable importance analysis
-│   └── model_summary.txt           # Training configuration
+├── data/                               # Organized raw + processed datasets
+│   ├── cpcb/                           # CPCB ground monitoring station data
+│   ├── ml_ready/                       # Final cleaned + merged ML-ready dataset
+│   ├── processed/                      # Preprocessed files
+│   ├── satellite/                      # MODIS AOD satellite data
+│   └── unified/                        # Combined datasets for training
 │
-├── 📁 dashboard/                    # Streamlit Dashboard
-│   ├── dashboard.py                # Main dashboard application
-│   ├── offline_forecast.py         # ML prediction engine
-│   └── requirements_dashboard.txt  # Dashboard-specific dependencies
+├── models/                             # Trained model artifacts & results
+│   ├── best_model.pkl                  # ⚠️ Model file (excluded from GitHub)
+│   ├── feature_importance_optimized.png # Top features chart
+│   ├── model_metrics.json              # Accuracy, RMSE, MAE, etc.
+│   ├── model_summary.txt               # Detailed training info
+│   ├── predictions_optimized.csv       # Cleaned forecast output
+│   └── predictions.csv                 # Raw prediction file
 │
-├── 📁 scripts/                      # Data Collection & Processing
-│   ├── data_collection.py          # Multi-source data gathering
-│   ├── preprocessing.py            # Data cleaning and feature engineering
-│   └── model_training.py           # ML model development
+├── notebooks/                          # Jupyter Notebooks for data pipeline
+│   ├── 01_Pan_India_Data_Collection.ipynb
+│   └── VayuDrishti_PM25_Training.ipynb # EDA + model training
 │
-├── 📁 utils/                        # Helper Functions
-│   ├── data_utils.py               # Data manipulation utilities
-│   ├── model_utils.py              # ML helper functions
-│   └── visualization_utils.py      # Plotting and mapping tools
-│
-├── 📁 notebooks/                    # Development & Analysis
-│   ├── 01_Data_Collection_Demo.ipynb
-│   ├── 02_EDA_Analysis.ipynb
-│   └── 03_Model_Training.ipynb
-│
-├── 📁 docs/                         # Documentation & Reports
-│   ├── technical_report.pdf        # Detailed methodology
-│   ├── screenshots/                # Dashboard images
-│   └── performance_analysis.html   # Model evaluation report
-│
-├── 📄 README.md                     # This documentation
-├── 📄 requirements.txt              # Full project dependencies
-├── 📄 LICENSE                       # MIT License
-└── 🚀 run_dashboard.bat            # Quick launcher script
-```
+├── launch_hackathon.py                # Entry script to launch dashboard locally
+├── verify_production.py              # Script to validate model before production
+├── requirements.txt                  # ✅ Global requirements (for whole repo)
+├── .gitignore                        # Prevents large/model files from uploading
+├── LICENSE                           # Open source license (MIT suggested)
+└── README.md                         # 📘 You are here!
 
+```
 ---
 
 ## 🚀 How to Run (Step-by-Step)
