@@ -5,7 +5,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.25%2B-red.svg)](https://streamlit.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **🇮🇳 Bharatiya Antariksh Hackathon 2025 | AI-Powered PM2.5 Prediction System for India**
+> **AI-Powered PM2.5 Prediction System for India**
 
 ---
 
