@@ -31,7 +31,6 @@
 
 ## 🎯 Problem Statement
 
-**Bharatiya Antariksh Hackathon Challenge:**
 *"Estimate surface-level PM2.5 concentrations using satellite observations combined with weather data and AI/ML methodologies."*
 
 ### 🚨 **Critical Issues Addressed**
