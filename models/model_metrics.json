@@ -1,0 +1,33 @@
+{
+  "best_model": {
+    "name": "XGBoost",
+    "mae": 10.200853073781845,
+    "rmse": 12.651110946684929,
+    "r2": 0.8522308421120742,
+    "parameters": {
+      "colsample_bytree": 0.9,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 300,
+      "subsample": 0.9
+    }
+  },
+  "dataset_info": {
+    "total_samples": 200,
+    "features_used": [
+      "aod_550",
+      "t2m_celsius",
+      "wind_speed_10m",
+      "r2m",
+      "blh",
+      "lat_cos",
+      "lat_sin",
+      "lon_cos",
+      "lon_sin",
+      "hour",
+      "month",
+      "season"
+    ],
+    "compatibility_fix": "Recreated with current XGBoost version"
+  }
+}
