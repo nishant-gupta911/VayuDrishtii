@@ -1,0 +1,4 @@
+2025-07-21 17:17:42,303 - INFO - Starting download for all CPCB stations (last 30 days)
+2025-07-21 17:17:42,303 - INFO - Fetching all CPCB stations across India...
+2025-07-21 17:17:43,946 - ERROR - Error fetching stations: 403 Client Error: Forbidden for url: https://api.data.gov.in/resource/89d74e94-7999-415a-9c3d-8cc094b5f66b?api-key=YOUR_API_KEY&format=json&limit=10000
+2025-07-21 17:17:43,960 - ERROR - No stations found
