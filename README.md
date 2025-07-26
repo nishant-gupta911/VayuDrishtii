@@ -93,52 +93,52 @@
 
 ---
 
-## � Grimoire of Folders
+## 📁 Project Structure
 
 ```
----
 
-## � Project Structure
-
-```
 VayuDrishti/
-├── dashboard/                          # Main application interface
-│   ├── check_dependencies.py           # Dependency verification utilities
-│   ├── dashboard.py                    # Primary Streamlit application
-│   ├── install_dependencies.py         # Automated dependency installation
-│   ├── offline_forecast.py             # Core PM2.5 prediction engine
-│   └── requirements_dashboard.txt      # Production deployment requirements
+├── dashboard/ # Main application interface
+│ ├── dashboard.py # Primary Streamlit application
+│ ├── check_dependencies.py # Dependency verification utilities
+│ ├── install_dependencies.py # Automated dependency installation
+│ ├── offline_forecast.py # Core PM2.5 prediction engine
+│ └── requirements_dashboard.txt # Production deployment requirements
 │
-├── data/                               # Organized datasets and processing results
-│   ├── cpcb/                           # CPCB ground monitoring station data
-│   ├── ml_ready/                       # Preprocessed, ML-ready datasets
-│   ├── processed/                      # Intermediate processing results
-│   ├── satellite/                      # MODIS AOD satellite data
-│   └── unified/                        # Merged datasets for model training
+├── data/ # Organized datasets and processing results
+│ ├── cpcb/ # CPCB ground monitoring station data
+│ ├── ml_ready/ # Preprocessed, ML-ready datasets
+│ ├── processed/ # Intermediate processing results
+│ └── satellite/ # MODIS AOD satellite data
+│ └── unified/ # Merged datasets for model training
 │
-├── models/                             # Trained models and evaluation metrics
-│   ├── best_model.pkl                  # Production XGBoost model
-│   ├── feature_importance_optimized.png # Feature analysis visualization
-│   ├── model_metrics.json              # Performance metrics and validation results
-│   ├── model_summary.txt               # Detailed model documentation
-│   ├── predictions_optimized.csv       # Model prediction outputs
-│   └── predictions.csv                 # Raw prediction results
+├── models/ # Trained models and evaluation metrics
+│ ├── best_model.pkl # Production XGBoost model
+│ ├── feature_importance_optimized.png # Feature analysis visualization
+│ ├── model_metrics.json # Performance metrics and validation results
+│ ├── model_summary.txt # Detailed model documentation
+│ └── predictions_optimized.csv # Model prediction outputs
 │
-├── notebooks/                          # Jupyter notebooks for analysis
-│   ├── 01_Pan_India_Data_Collection.ipynb
-│   └── VayuDrishti_PM25_Training.ipynb # EDA and model development
+├── notebooks/ # Jupyter notebooks for analysis
+│ ├── 01_Pan_India_Data_Collection.ipynb
+│ └── VayuDrishti_PM25_Training.ipynb # EDA and model development
 │
-├── launch_hackathon.py                # Application entry point
-├── verify_production.py              # Production readiness validation
-├── requirements.txt                  # Complete project dependencies
-├── HOW_TO_RUN.md                     # Detailed installation guide
-├── .gitignore                        # Version control exclusions
-├── LICENSE                           # MIT License
-└── README.md                         # Project documentation
+├── scripts/ # Core scripts for training and validation
+│ ├── model_training.py # Model training script
+│ ├── evaluate_model.py # Evaluation script
+│ ├── data_collection.py # Update datasets
+│ ├── preprocessing.py # Preprocessing utilities
+│ └── verify_production.py # Production readiness validation
+│
+├── launch_hackathon.py # Application entry point
+├── requirements.txt # Complete project dependencies
+├── HOW_TO_RUN.md # Detailed installation guide
+├── LICENSE # MIT License
+├── README.md # Project documentation
+└── .gitignore # Version control exclusions
 
 ```
 
-```
 ---
 
 ## 🚀 Installation & Setup Guide
@@ -291,41 +291,8 @@ jupyter notebook notebooks/
 # - VayuDrishti_PM25_Training.ipynb: Model development and validation
 ```
 
----
 
-## 🏆 **Innovation & Technical Excellence - Triwizardathon 1.0**
 
-### 🥇 **Competitive Advantages**
-- **First-of-its-Kind**: Offline-capable air quality prediction system for India
-- **Novel Integration**: Fusion of satellite AOD data with meteorological reanalysis
-- **Advanced Engineering**: Sophisticated feature engineering with geographic and temporal encoding
-- **Production-Ready**: Optimized deployment architecture with sub-100ms inference
-
-### 📈 **Technical Impact Metrics**
-- **Geographic Scale**: 3.3M km² coverage (entire Indian subcontinent)
-- **Population Impact**: 1.4B+ potential users served
-- **Rural Innovation**: Addresses 65% of India lacking ground monitoring infrastructure
-- **Performance Improvement**: 15-20% accuracy enhancement over existing solutions
-
-### 🏅 **Technical Architecture Excellence**
-- **Modular Design**: Clean, well-documented, maintainable codebase
-- **Scalable Framework**: Extensible to other geographic regions and pollutants
-- **User Experience**: Intuitive interface design for technical and non-technical users
-- **Cloud-Ready**: Docker containerization and cloud deployment compatibility
-
----
-
-## 🤝 **Contributing to VayuDrishti**
-
-We welcome contributions from the technical community. Here's how you can contribute:
-
-### 🌟 **Priority Contribution Areas**
-- **Geographic Expansion**: Adaptation for other countries and regions
-- **Algorithm Enhancement**: Implementation of advanced ML/DL models
-- **Mobile Development**: React Native/Flutter mobile applications
-- **Real-time Integration**: Live satellite data streaming capabilities
-- **Analytics Enhancement**: Advanced statistical analysis and forecasting
-- **Health Integration**: Medical advisory and alert systems
 
 ### 🛠️ **Development Environment Setup**
 ```bash
@@ -348,71 +315,6 @@ streamlit run dashboard/dashboard.py
 
 ---
 
-## � **Slytherin Spellcrafting & Advanced Sorcery**
-
-### 🔬 **Familiar Retraining Rituals**
-```bash
-# Update familiar with new dark knowledge
-python scripts/model_training.py --retrain
-
-# Evaluate familiar's prophecy performance
-python scripts/evaluate_model.py --metrics
-```
-
-### 📊 **Data Cauldron Execution**
-```bash
-# Collect latest celestial and weather enchantments
-python scripts/data_collection.py --update
-
-# Preprocess and purify essence data
-python scripts/preprocessing.py --clean --validate
-```
-
-### 🧪 **Jupyter Spellbook Analysis**
-```bash
-# Launch interactive alchemy laboratory
-jupyter notebook notebooks/
-
-# Available grimoires:
-# - Data Collection Demo
-# - Exploratory Dark Arts Analysis
-# - Familiar Training & Validation
-```
-
----
-
-## 🤝 **Join the Slytherin Atmospheric Coven**
-
-We welcome ambitious sorcerers to VayuDrishti! Here's how you can contribute your dark arts:
-
-### 🌟 **Areas for Cunning Contribution**
-- **🌍 Geographic Expansion**: Adapt spells for other magical realms
-- **🔬 Familiar Enhancement**: Experiment with other ML creatures
-- **📱 Mobile Divination**: React Native/Flutter scrying apps
-- **🛰️ Real-time Integration**: Live celestial data incantations
-- **📊 Analytics Enhancement**: Historical dark trend analysis
-- **🏥 Health Integration**: Medical advisory protection spells
-
-### 🛠️ **Dark Arts Development Setup**
-```bash
-# 1. Fork and summon repository
-git clone https://github.com/YOUR_USERNAME/VayuDrishti.git
-
-# 2. Create magical environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 3. Install sorcery dependencies
-pip install -r requirements.txt
-
-# 4. Test your dark magic
-python -m pytest tests/
-
-# 5. Launch development portal
-streamlit run dashboard/dashboard.py
-```
-
----
 
 ## 📚 **Acknowledgments & Technical Credits**
 
@@ -493,31 +395,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-**🏆 Submitted for Triwizardathon 1.0 | Team: House Slytherin | Advanced AI/ML Forecasting Track** 
-
-*Last Updated: July 25, 2025 | Version: 2.1.0 Professional Edition | Status: Production Ready*
-
-## 🚀 **Quick Enchantment Links & Mystical Resources**
-
-- 🌐 **Live Scrying Portal**: [Coming Soon - Deployment URL]
-- 📖 **Technical Grimoire**: `/docs/technical_report.pdf`
-- 🐛 **Hexes & Bug Reports**: [GitHub Issues](https://github.com/nishant-gupta911/VayuDrishti/issues)
-- 💡 **Spell Enhancement Requests**: [GitHub Discussions](https://github.com/nishant-gupta911/VayuDrishti/discussions)
-- 📊 **Performance Crystal Ball**: [Familiar Metrics](docs/performance_analysis.html)
-
----
-
-### 🎯 **Crafted for Triwizardathon 1.0** 🏆
-### 🐍 **House Slytherin - The Cunning Predictors** �
-### ❤️ **Made with ambition in India** 🇮🇳
-### 🌍 **For a cleaner, more cunning future** 🌱
-
----
-
-*"Just as the Sorting Hat recognized cunning potential in the darkest of times, VayuDrishti sees clear skies through the heaviest pollution. For House Slytherin - where atmospheric ambition meets environmental consciousness."* 🐍✨
-
----
-
-**🏆 Submitted with Slytherin pride for Triwizardathon 1.0 | 🐍 House of the Cunning | The Atmospheric Predictors** 
-
-*Last Updated: July 24, 2025 | Version: 2.0.0 Slytherin Edition | Status: Dark Arts Production Ready* 🐍
