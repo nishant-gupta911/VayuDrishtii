@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 🌍 VayuDrishti PM2.5 Forecasting Dashboard - Hackathon Edition
-Offline-only air quality prediction system for Bharatiya Antariksh
+Offline-only air quality prediction system
 
 Features:
 - 🔋 Fully offline using local XGBoost model (R² > 0.88)
@@ -86,7 +86,7 @@ except ImportError:
 
 # Configure page
 st.set_page_config(
-    page_title="🌍 VayuDrishti - Bharatiya Antariksh",
+    page_title="🌍 VayuDrishti",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -1504,8 +1504,7 @@ class VayuDrishtiDashboard:
             <div class="footer">
                 <h4>🌍 VayuDrishti - Air Quality Forecasting System</h4>
                 <p><strong>Advanced ML-powered PM2.5 prediction and AQI monitoring for India</strong></p>
-                <p>🇮🇳 Built for Bharatiya Antariksh Hackathon | XGBoost + Streamlit (Offline Mode)</p>
-                <p>🌍 VayuDrishti - Making Air Quality Monitoring Accessible to Every Indian Citizen</p>
+                <p> VayuDrishti - Making Air Quality Monitoring Accessible to Every Indian Citizen</p>
             </div>
             """, unsafe_allow_html=True)
         
