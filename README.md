@@ -1,14 +1,6 @@
 # VayuDrishti: Advanced PM2.5 Forecasting System
-## *Intelligence Through Ambition - A Slytherin Approach to Air Quality Prediction*
 
-> *"Where methodical precision meets innovative intelligence to decode atmospheric complexities across the Indian subcontinent"*
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-orange.svg)](https://xgboost.readthedocs.io/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.25%2B-red.svg)](https://streamlit.io)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Model Performance](https://img.shields.io/badge/R²_Score-0.884-brightgreen.svg)](models/)
-[![Coverage](https://img.shields.io/badge/Geographic_Coverage-Pan_India-orange.svg)](data/)
 
 ---
 
@@ -18,29 +10,20 @@
 
 > **Real-time PM2.5 prediction system leveraging satellite data, meteorological parameters, and machine learning for comprehensive air quality assessment across India**The Slytherin Air Prophecy System
 
-> *"Summoned from the depths of Slytherin's dungeons, where ambition meets intelligence to unveil the mysteries of the skies..."*
+
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-orange.svg)](https://xgboost.readthedocs.io/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.25%2B-red.svg)](https://streamlit.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Coverage](https://img.shields.io/badge/Geographic_Coverage-Pan_India-orange.svg)](data/)
 
----
-
-## 🏰 **TRIWIZARDATHON 1.0** 🏆
-**🐍 House Slytherin | 🧙‍♂️ Track: AI/ML - Forecasting the Unseen**
-
-*Where cunning minds craft spells to pierce through the veil of atmospheric mysteries...*
-
-> **🔮 The Dark Arts of PM2.5 Divination Across the Indian Realm**
-
----
 
 ## 📊 Project Overview
 
-**VayuDrishti** is a sophisticated, production-ready PM2.5 forecasting system developed with Slytherin precision - combining methodical data engineering, advanced machine learning, and strategic innovation to deliver accurate air quality predictions across the Indian subcontinent.
+**VayuDrishti** is a comprehensive 2-year pan-India PM2.5 forecasting system that we completed by combining cutting-edge satellite technology, meteorological data, and machine learning to provide accurate air quality predictions across the entire Indian subcontinent.
 
-*"Strategic intelligence applied to environmental challenges - where computational precision meets ambitious problem-solving"*
+
 
 ### 🛰️ **Multi-Source Data Integration**
 - **Satellite Intelligence**: INSAT/MODIS Aerosol Optical Depth measurements
@@ -60,7 +43,7 @@
 
 ## 🚨 Problem Statement
 
-*"Addressing the critical gap in accessible, accurate air quality forecasting across India's diverse geographic and economic landscape"*
+*"Estimate surface-level PM2.5 concentrations using satellite observations combined with weather data and AI/ML methodologies."*
 
 ### 📈 **Current Challenges**
 - **Limited Infrastructure**: Approximately 300 monitoring stations serving 1.4 billion people
