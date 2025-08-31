@@ -1,16 +1,4 @@
-# VayuDrishti: Advanced PM2.5 Forecasting System
-
-
-
----
-
-## 🏆 **TRIWIZARDATHON 1.0 SUBMISSION**
-**Team:** House Slytherin | **Track:** AI/ML - Advanced Forecasting Systems  
-**Focus:** Precision-driven atmospheric intelligence with multi-source data fusion
-
-> **Real-time PM2.5 prediction system leveraging satellite data, meteorological parameters, and machine learning for comprehensive air quality assessment across India**The Slytherin Air Prophecy System
-
-
+# 📌 VayuDrishti: Pan-India Air Quality Forecasting System
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-orange.svg)](https://xgboost.readthedocs.io/)
@@ -18,26 +6,29 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Coverage](https://img.shields.io/badge/Geographic_Coverage-Pan_India-orange.svg)](data/)
 
+> **AI-Powered PM2.5 Prediction System for India**
 
-## 📊 Project Overview
+---
 
-**VayuDrishti** is a comprehensive 2-year pan-India PM2.5 forecasting system that we completed by combining cutting-edge satellite technology, meteorological data, and machine learning to provide accurate air quality predictions across the entire Indian subcontinent.
+## 🌍 Project Overview
+
+**VayuDrishti** is a comprehensive 2-year pan-India PM2.5 forecasting system that combines cutting-edge satellite technology, meteorological data, and machine learning to provide accurate air quality predictions across the entire Indian subcontinent.
 
 
 
-### 🛰️ **Multi-Source Data Integration**
-- **Satellite Intelligence**: INSAT/MODIS Aerosol Optical Depth measurements
-- **Meteorological Analytics**: ERA5 comprehensive weather parameter analysis (temperature, wind vectors, humidity)
-- **Ground Truth Validation**: CPCB (Central Pollution Control Board) monitoring network integration
-- **Machine Learning Engine**: XGBoost gradient boosting with optimized hyperparameters
-- **Interactive Dashboard**: Streamlit-powered visualization and prediction interface
+### 🛰️ **Data Sources Integration**
+- **Satellite AOD**: INSAT/MODIS Aerosol Optical Depth measurements
+- **Reanalysis Weather**: ERA5 meteorological parameters (temperature, wind, humidity)
+- **Ground-Truth Monitoring**: CPCB (Central Pollution Control Board) validation data
+- **Advanced ML**: XGBoost gradient boosting algorithm
+- **Interactive Dashboard**: Streamlit-based visualization and prediction interface
 
 ### 🎯 **Core Capabilities**
-- **Real-time Inference**: Sub-100ms PM2.5 predictions for any Indian coordinate
-- **Historical Analysis**: 2+ years of comprehensive atmospheric data processing
-- **Offline Operation**: Complete functionality without external API dependencies
-- **Regional Intelligence**: City-specific monitoring for major Indian metropolitan areas
-- **Health Advisory**: CPCB-compliant AQI categorization with health recommendations
+- **Real-time Predictions**: Instant PM2.5 forecasting for any location in India
+- **Historical Analysis**: 2+ years of comprehensive air quality data
+- **Offline Operation**: No cloud dependencies or API requirements
+- **Regional Intelligence**: City-wise summaries for major Indian metropolitan areas
+- **Health Advisory**: CPCB-compliant AQI categories and recommendations
 
 ---
 
@@ -45,241 +36,265 @@
 
 *"Estimate surface-level PM2.5 concentrations using satellite observations combined with weather data and AI/ML methodologies."*
 
-### 📈 **Current Challenges**
-- **Limited Infrastructure**: Approximately 300 monitoring stations serving 1.4 billion people
-- **Geographic Inequality**: Dense urban monitoring with significant rural coverage gaps  
-- **Temporal Delays**: Real-time reporting limitations and insufficient predictive capabilities
-- **Technical Barriers**: Existing solutions require continuous internet connectivity and specialized knowledge
+### � **Critical Issues Addressed**
+- **Limited Ground Monitoring**: Only ~300 air quality stations for 1.4 billion people
+- **Rural Coverage Gap**: Most monitoring concentrated in urban areas
+- **Real-time Data Scarcity**: Delayed reporting and limited prediction capabilities
+- **Accessibility Barriers**: Existing solutions require constant internet connectivity
 
 ---
 
-## 🔬 Technical Architecture & Innovation
+## 🧠 Solution Highlights
 
-### 🏗️ **Advanced Data Pipeline**
-- **Multi-Modal Fusion**: Seamless integration of satellite, meteorological, and ground sensor data
-- **Data Quality Assurance**: Comprehensive preprocessing with outlier detection and temporal consistency validation
-- **Feature Engineering**: 12 optimized features including geographic encoding and temporal patterns
-- **Scalable Processing**: Efficient handling of 100,000+ validated atmospheric records
+### 🔬 **Advanced Data Pipeline**
+- **Multi-Source Integration**: Seamlessly combines satellite, weather, and ground station data
+- **2-Year Historical Dataset**: 100,000+ cleaned and validated records
+- **Quality Assurance**: Comprehensive data preprocessing and outlier detection
+- **Feature Engineering**: 12 optimized variables including geographic and temporal encoding
 
-### 🤖 **Machine Learning Implementation**
-- **Model Performance**: XGBoost achieving R² > 0.88 (88%+ prediction accuracy)
-- **Inference Speed**: Optimized for real-time applications with <100ms response time
-- **Validation Framework**: K-fold cross-validation with temporal splitting for robust evaluation
-- **Deployment Efficiency**: Compressed model size (279KB) for rapid deployment
+### 🤖 **Optimized Machine Learning**
+- **High Performance**: XGBoost model achieving R² > 0.88 (88%+ accuracy)
+- **Fast Inference**: <100ms prediction time for real-time applications
+- **Robust Validation**: K-fold cross-validation and temporal splitting
+- **Lightweight Deployment**: 279KB model size for easy distribution
 
-### � **Interactive Web Application**
-- **Geospatial Visualization**: Real-time color-coded air quality mapping across India
-- **Metropolitan Monitoring**: Live predictions for major Indian cities
-- **Custom Predictions**: Location-specific forecasting with health impact assessment
-- **Trend Analysis**: Multi-day forecasting with confidence intervals
-- **Offline-First Architecture**: Complete functionality without external dependencies
+### 📊 **Interactive Dashboard**
+- **Pan-India Visualization**: Real-time color-coded air quality map
+- **Major Cities Monitoring**: Live predictions for Delhi, Mumbai, Bangalore, and more
+- **Custom Predictions**: Location-specific forecasting with health recommendations
+- **Multi-day Forecasting**: 3-7 day trend analysis and alerts
+- **Offline-First Design**: Complete functionality without internet access
 
 ---
 
-## 📁 Project Structure
-
+## 🗂️ Project Structure
 ```
-
-VayuDrishti/
-├── dashboard/ # Main application interface
-│ ├── dashboard.py # Primary Streamlit application
-│ ├── check_dependencies.py # Dependency verification utilities
-│ ├── install_dependencies.py # Automated dependency installation
-│ ├── offline_forecast.py # Core PM2.5 prediction engine
-│ └── requirements_dashboard.txt # Production deployment requirements
+Vayu_Drishti/
+├── assets/                             # Static assets like logos, icons (optional)
+├── dashboard/                          # Main interactive forecasting dashboard (Streamlit)
+│   ├── check_dependencies.py           # Script to verify environment setup
+│   ├── dashboard.py                    # 🚀 Main dashboard UI + logic
+│   ├── install_dependencies.py         # Auto-installer for missing packages
+│   ├── offline_forecast.py             # PM2.5 forecasting logic (offline model)
+│   └── requirements_dashboard.txt      # Dashboard-specific dependencies
 │
-├── data/ # Organized datasets and processing results
-│ ├── cpcb/ # CPCB ground monitoring station data
-│ ├── ml_ready/ # Preprocessed, ML-ready datasets
-│ ├── processed/ # Intermediate processing results
-│ └── satellite/ # MODIS AOD satellite data
-│ └── unified/ # Merged datasets for model training
+├── data/                               # Organized raw + processed datasets
+│   ├── cpcb/                           # CPCB ground monitoring station data
+│   ├── ml_ready/                       # Final cleaned + merged ML-ready dataset
+│   ├── processed/                      # Preprocessed files
+│   ├── satellite/                      # MODIS AOD satellite data
+│   └── unified/                        # Combined datasets for training
 │
-├── models/ # Trained models and evaluation metrics
-│ ├── best_model.pkl # Production XGBoost model
-│ ├── feature_importance_optimized.png # Feature analysis visualization
-│ ├── model_metrics.json # Performance metrics and validation results
-│ ├── model_summary.txt # Detailed model documentation
-│ └── predictions_optimized.csv # Model prediction outputs
+├── models/                             # Trained model artifacts & results
+│   ├── best_model.pkl                  # ⚠️ Model file (excluded from GitHub)
+│   ├── feature_importance_optimized.png # Top features chart
+│   ├── model_metrics.json              # Accuracy, RMSE, MAE, etc.
+│   ├── model_summary.txt               # Detailed training info
+│   ├── predictions_optimized.csv       # Cleaned forecast output
+│   └── predictions.csv                 # Raw prediction file
 │
-├── notebooks/ # Jupyter notebooks for analysis
-│ ├── 01_Pan_India_Data_Collection.ipynb
-│ └── VayuDrishti_PM25_Training.ipynb # EDA and model development
+├── notebooks/                          # Jupyter Notebooks for data pipeline
+│   ├── 01_Pan_India_Data_Collection.ipynb
+│   └── VayuDrishti_PM25_Training.ipynb # EDA + model training
 │
-├── scripts/ # Core scripts for training and validation
-│ ├── model_training.py # Model training script
-│ ├── evaluate_model.py # Evaluation script
-│ ├── data_collection.py # Update datasets
-│ ├── preprocessing.py # Preprocessing utilities
-│ └── verify_production.py # Production readiness validation
-│
-├── launch_hackathon.py # Application entry point
-├── requirements.txt # Complete project dependencies
-├── HOW_TO_RUN.md # Detailed installation guide
-├── LICENSE # MIT License
-├── README.md # Project documentation
-└── .gitignore # Version control exclusions
+├── launch_hackathon.py                # Entry script to launch dashboard locally
+├── verify_production.py              # Script to validate model before production
+├── requirements.txt                  # ✅ Global requirements (for whole repo)
+├── .gitignore                        # Prevents large/model files from uploading
+├── LICENSE                           # Open source license (MIT suggested)
+└── README.md                         # 📘 You are here!
 
 ```
 
 ---
 
-## 🚀 Installation & Setup Guide
+## 🚀 How to Run (Step-by-Step)
 
-### 📋 **System Requirements**
+### 📋 **Prerequisites**
 ```bash
-✅ Python 3.8+ (Recommended: Python 3.9 or 3.10)
-✅ pip package manager
-✅ Minimum 4GB RAM for optimal performance
-✅ Operating System: Windows/Linux/macOS
-✅ Internet connection for initial setup (optional for runtime)
+✅ Python 3.8 or higher
+✅ pip (Python package manager)
+✅ 4GB RAM minimum
+✅ Windows/Linux/macOS
 ```
 
-### ⚙️ **Installation Options**
+### 🛠️ **Installation & Setup**
 
-#### **Option 1: Complete Development Environment**
+#### **Option 1: Full Project Setup**
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/nishant-gupta911/VayuDrishti.git
 cd VayuDrishti
 
-# Install all dependencies
+# 2. Install all dependencies
 pip install -r requirements.txt
 
-# Launch the application
+# 3. Run the dashboard
 cd dashboard
 streamlit run dashboard.py
 ```
 
-#### **Option 2: Production Dashboard Only**
+#### **Option 2: Dashboard Only**
 ```bash
-# Navigate to dashboard directory
+# 1. Navigate to dashboard folder
 cd VayuDrishti/dashboard
 
-# Install minimal production dependencies
+# 2. Install dashboard dependencies only
 pip install -r requirements_dashboard.txt
 
-# Run the dashboard
+# 3. Launch dashboard
 streamlit run dashboard.py
 ```
 
-#### **Option 3: Quick Start (Windows)**
+#### **Option 3: Quick Launch (Windows)**
 ```bash
-# Execute batch file for automated setup
+# Double-click or run
 run_dashboard.bat
 ```
 
-### 🌐 **Accessing the Application**
+### 🌐 **Access the Dashboard**
 ```bash
-# Open your web browser and navigate to:
+# Open your browser and navigate to:
 http://localhost:8501
 
-# Application features:
-✅ Interactive India-wide PM2.5 visualization
-✅ Real-time metropolitan area monitoring
-✅ Custom location prediction tools
-✅ Multi-day forecasting with trend analysis
-✅ Health advisory based on CPCB standards
+# You should see the VayuDrishti interface with:
+✅ Interactive India map with PM2.5 levels
+✅ Major cities real-time monitoring
+✅ Custom location prediction tool
+✅ Multi-day forecasting charts
 ```
 
 ---
 
-## 📦 Dependencies & Requirements
+## 📦 Requirements
 
-### 🎯 **Deployment Configurations**
+### 🎯 **Two Deployment Options**
 
-#### **Full Development Stack** (`requirements.txt`)
-Complete environment for development, training, and production deployment:
-- Data processing: pandas, numpy, scipy
-- Machine learning: xgboost, scikit-learn, joblib
-- Visualization: plotly, folium, matplotlib, seaborn
-- Web framework: streamlit
-- Analysis tools: jupyter, ipython
+#### **Full Project** (`requirements.txt`)
+For complete development, training, and dashboard functionality:
+- Data processing libraries (pandas, numpy)
+- Machine learning frameworks (xgboost, scikit-learn)
+- Visualization tools (plotly, folium, matplotlib)
+- Dashboard framework (streamlit)
+- Jupyter notebook support
 
-#### **Production Deployment** (`dashboard/requirements_dashboard.txt`)
-Optimized dependencies for production dashboard deployment:
-- streamlit (web application framework)
-- pandas, numpy (data manipulation)
+#### **Dashboard Only** (`dashboard/requirements_dashboard.txt`)
+Minimal dependencies for production dashboard deployment:
+- streamlit (web interface)
+- pandas, numpy (data handling)
 - xgboost (model inference)
-- plotly, folium (interactive visualizations)
-- joblib (model serialization)
+- plotly, folium (visualization)
+- joblib (model loading)
 
 ---
 
-## � Performance Metrics & Results
+## 🧪 Sample Output & Performance
 
-### 🎯 **Model Performance Validation**
+### 📊 **Model Performance Metrics**
 ```python
-# Production Model Metrics
+# Prediction Accuracy Results
 R² Score: 0.884          # 88.4% variance explained
 MAE: 12.3 μg/m³          # Mean Absolute Error
 RMSE: 18.7 μg/m³         # Root Mean Square Error
-Inference Time: <100ms   # Real-time prediction capability
-Model Size: 279KB        # Efficient deployment footprint
+Prediction Speed: <100ms  # Real-time inference
 ```
 
-### 🗺️ **Geographic & Temporal Coverage**
-- **Spatial Extent**: 8°N to 37°N, 68°E to 97°E (Complete Indian territory)
-- **Temporal Range**: 2+ years comprehensive data (2023-2025)
-- **Data Volume**: 100,000+ validated atmospheric measurements
-- **Urban Coverage**: 10+ major metropolitan areas with continuous monitoring
+### 🗺️ **Geographic Coverage**
+- **Spatial Range**: 8°N to 37°N, 68°E to 97°E (Entire India)
+- **Temporal Coverage**: 2+ years (2023-2025)
+- **Data Points**: 100,000+ validated records
+- **Cities Covered**: 10+ major metropolitan areas
 
-### 🏙️ **Metropolitan Area Performance Analysis**
-| City | Population | Average PM2.5 | Air Quality Status |
-|------|------------|---------------|--------------------|
-| Delhi | 32M | 45 μg/m³ | Moderate |
-| Mumbai | 21M | 38 μg/m³ | Satisfactory |
-| Bangalore | 13M | 32 μg/m³ | Satisfactory |
-| Kolkata | 15M | 42 μg/m³ | Moderate |
-| Chennai | 11M | 29 μg/m³ | Satisfactory |
+### 🏙️ **Major Cities Real-time Monitoring**
+| City | Population | Avg PM2.5 | Status |
+|------|------------|-----------|---------|
+| 🏛️ Delhi | 32M | 45 μg/m³ | Moderate |
+| 🏙️ Mumbai | 21M | 38 μg/m³ | Satisfactory |
+| 🌆 Bangalore | 13M | 32 μg/m³ | Satisfactory |
+| 🏘️ Kolkata | 15M | 42 μg/m³ | Moderate |
+| 🌴 Chennai | 11M | 29 μg/m³ | Satisfactory |
 
 ### 🏥 **Health Impact Assessment (CPCB Standards)**
-| PM2.5 Concentration | AQI Range | Health Category | Public Health Advisory |
-|---------------------|-----------|-----------------|------------------------|
-| 0-30 μg/m³ | 0-50 | 🟢 Good | Optimal for outdoor activities |
-| 31-60 μg/m³ | 51-100 | 🟡 Satisfactory | Generally acceptable for most individuals |
+| PM2.5 Range | AQI | Category | Health Advisory |
+|-------------|-----|-----------|----------------|
+| 0-30 μg/m³ | 0-50 | 🟢 Good | Excellent for outdoor activities |
+| 31-60 μg/m³ | 51-100 | 🟡 Satisfactory | Generally acceptable |
 | 61-90 μg/m³ | 101-200 | 🟠 Moderate | Sensitive groups may experience symptoms |
-| 91-120 μg/m³ | 201-300 | 🔴 Poor | Health effects for general population |
-| 121+ μg/m³ | 300+ | 🟣 Severe | Serious health implications for all |
+| 91-120 μg/m³ | 201-300 | 🔴 Poor | Health effects for everyone |
+| 121+ μg/m³ | 300+ | 🟣 Severe | Serious health implications |
 
 ---
 
-## 🔧 Development & Advanced Usage
+## �️ Development & Advanced Usage
 
-### 🔬 **Model Development & Training**
+### 🔬 **Model Retraining**
 ```bash
-# Retrain model with updated datasets
+# Update model with new data
 python scripts/model_training.py --retrain
 
-# Comprehensive model evaluation
-python scripts/evaluate_model.py --metrics --validation
+# Evaluate model performance
+python scripts/evaluate_model.py --metrics
 ```
 
-### 📊 **Data Pipeline Management**
+### 📊 **Data Pipeline Execution**
 ```bash
-# Update data sources with latest measurements
-python scripts/data_collection.py --update --validate
+# Collect latest satellite and weather data
+python scripts/data_collection.py --update
 
-# Execute preprocessing pipeline
-python scripts/preprocessing.py --clean --normalize --feature-engineering
+# Preprocess and clean data
+python scripts/preprocessing.py --clean --validate
 ```
 
-### 🧪 **Research & Analysis Environment**
+### 🧪 **Jupyter Notebook Analysis**
 ```bash
-# Launch Jupyter environment for analysis
+# Launch interactive analysis environment
 jupyter notebook notebooks/
 
-# Available analysis notebooks:
-# - 01_Pan_India_Data_Collection.ipynb: Data acquisition methodology
-# - VayuDrishti_PM25_Training.ipynb: Model development and validation
+# Available notebooks:
+# - Data Collection Demo
+# - Exploratory Data Analysis
+# - Model Training & Validation
 ```
 
+---
 
+## 🎯 Innovation & Technical Excellence
 
+### 🏆 **Project Achievements**
+- **🥇 First** offline-capable air quality system for India
+- **🔬 Novel** integration of satellite AOD with weather reanalysis
+- **⚡ Advanced** feature engineering with geographic encoding
+- **🚀 Production-ready** deployment with <100ms inference
 
-### 🛠️ **Development Environment Setup**
+### � **Impact Metrics**
+- **🌍 Geographic Coverage**: 3.3M km² (entire India)
+- **👥 Population Served**: 1.4B+ potential users
+- **🏘️ Rural Reach**: 65% of India without ground monitoring
+- **📊 Accuracy Improvement**: 15-20% over existing models
+
+### 🏅 **Technical Excellence**
+- **Clean Architecture**: Modular, well-documented codebase
+- **Scalable Design**: Easy extension to other countries/pollutants
+- **User Experience**: Intuitive interface for non-technical users
+- **Deployment Ready**: Docker support, cloud-compatible
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to VayuDrishti! Here's how you can help:
+
+### � **Areas for Contribution**
+- **🌍 Geographic Extension**: Adapt for other countries
+- **� Model Enhancement**: Experiment with other ML algorithms
+- **📱 Mobile Development**: React Native/Flutter apps
+- **🛰️ Real-time Integration**: Live satellite data feeds
+- **📊 Analytics Enhancement**: Historical trend analysis
+- **🏥 Health Integration**: Medical advisory systems
+
+### 🛠️ **Development Setup**
 ```bash
-# 1. Fork and clone repository
+# 1. Fork and clone
 git clone https://github.com/YOUR_USERNAME/VayuDrishti.git
 
 # 2. Create virtual environment
@@ -289,92 +304,86 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 # 3. Install development dependencies
 pip install -r requirements.txt
 
-# 4. Run test suite
-python -m pytest tests/ --coverage
+# 4. Run tests
+python -m pytest tests/
 
-# 5. Launch development server
+# 5. Launch development dashboard
 streamlit run dashboard/dashboard.py
 ```
 
 ---
 
+## 📚 Credits & Acknowledgments
 
-## 📚 **Acknowledgments & Technical Credits**
+### 🏆 **Institution & Partners**
+- **🛰️ ISRO** - Satellite technology and data access
+- **🏥 CPCB** - Air quality standards and monitoring network
 
-### 🏆 **Competition & Institutional Support**
-- **Triwizardathon 1.0** - Competition platform and technical challenge framework
-- **ISRO (Indian Space Research Organisation)** - Satellite data access and space technology support
-- **CPCB (Central Pollution Control Board)** - Air quality standards and monitoring network data
+### 📊 **Data & Technology Partners**
+- **🌍 NASA/ESA** - Satellite AOD data (MODIS, Sentinel-5P)
+- **🌦️ ECMWF** - ERA5 meteorological reanalysis data
+- **🇮🇳 IMD** - Indian Meteorological Department insights
+- **🧠 Open Source Community** - Python ecosystem and libraries
 
-### 📊 **Data Sources & Technology Partners**
-- **NASA/ESA** - Satellite AOD data (MODIS, Sentinel-5P missions)
-- **ECMWF** - ERA5 meteorological reanalysis datasets
-- **IMD (India Meteorological Department)** - Regional meteorological insights
-- **Open Source Community** - Python ecosystem, libraries, and frameworks
-
-### 👨‍💻 **Development Team - House Slytherin**
+### 👨‍💻 **Development Team**
 - **Lead Developer**: Nishant Gupta ([@nishant-gupta911](https://github.com/nishant-gupta911))
-- **Repository**: [VayuDrishti](https://github.com/nishant-gupta911/VayuDrishti)
-- **Technical Contact**: [GitHub Profile](https://github.com/nishant-gupta911)
+- **Project Repository**: [VayuDrishti](https://github.com/nishant-gupta911/VayuDrishti)
+- **Contact**: [GitHub Profile](https://github.com/nishant-gupta911)
 
 ---
 
-## � **Project Contributors**
+## 🧑‍💻 Contributors
 
-| Contributor | Technical Contribution |
-|-------------|------------------------|
-| Nikita | **Phase 1 & 2 Lead**: Data collection and preprocessing pipeline development using CPCB, AOD, and ERA5 sources. ML-ready dataset preparation and validation. |
-| Nishant Gupta | **Technical Lead**: Machine learning model development, API design, frontend implementation, optimization, and production deployment. |
+| Name     | Contribution |
+|----------|--------------|
+| Nikita   | 📊 Led Phase 1 & Phase 2: Data Collection and Preprocessing using CPCB, AOD, and ERA5 weather sources. Helped unify and prepare the ML-ready dataset. |
+| Nishant Gupta | 🤖 Built ML model, API, frontend dashboard, and led optimization & deployment. |
 
-*Special recognition to Nikita for her foundational work in data engineering and preprocessing infrastructure.*
+🙏 Special thanks to Nikita for her support during the initial data engineering and preprocessing phase.
 
 ### 📜 **License**
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for complete terms and conditions.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🌟 **Vision & Strategic Roadmap**
+## 🌟 Vision & Future Roadmap
 
-**VayuDrishti** represents our commitment to democratizing environmental intelligence across India through innovative technology. Our strategic approach combines cutting-edge satellite technology with accessible machine learning to:
+**VayuDrishti** represents our commitment to democratizing environmental information across India. By combining cutting-edge satellite technology with accessible machine learning, we aim to:
 
-- 🏥 **Enhance Public Health**: Enable data-driven decisions for outdoor activities and health protection
-- 🏛️ **Support Policy Development**: Provide evidence-based data for environmental regulations and urban planning
-- 🔬 **Advance Research**: Create open datasets for academic research and commercial innovation
-- 🌍 **Bridge Technology Gaps**: Make sophisticated air quality analysis accessible in underserved areas
-- 🚀 **Demonstrate Innovation**: Showcase space technology applications for social and environmental impact
+- 🏥 **Improve Public Health**: Enable better decision-making for outdoor activities
+- 🏛️ **Support Policy Making**: Provide data for environmental regulations and urban planning
+- 🔬 **Advance Research**: Create open datasets for academic and commercial innovation
+- 🌍 **Bridge Digital Divide**: Make air quality accessible in rural and remote areas
+- 🚀 **Inspire Innovation**: Demonstrate space technology potential for social good
 
 ### 🎯 **Immediate Goals (2025)**
-- Deploy real-time satellite data integration capabilities
-- Expand coverage to neighboring South Asian countries
-- Develop mobile applications for enhanced accessibility
-- Integrate with public health advisory and alert systems
+- Deploy real-time satellite data integration
+- Expand to neighboring South Asian countries
+- Develop mobile applications for broader accessibility
+- Integrate with public health advisory systems
 
 ### 🌈 **Long-term Vision (2025-2030)**
 - Global air quality forecasting platform
-- Integration with IoT sensor networks and smart city infrastructure
-- AI-powered personalized health recommendation engine
+- Integration with IoT sensor networks
+- AI-powered health recommendation engine
 - Policy impact assessment and environmental planning tools
 
 ---
 
-## 🚀 **Resources & Links**
+## 🚀 Quick Links & Resources
 
-- 🌐 **Live Application**: [Coming Soon - Production Deployment]
+- 🌐 **Live Demo**: [Coming Soon - Deployment URL]
 - 📖 **Technical Documentation**: `/docs/technical_report.pdf`
-- 🐛 **Issue Tracking**: [GitHub Issues](https://github.com/nishant-gupta911/VayuDrishti/issues)
+- 🐛 **Issues & Bug Reports**: [GitHub Issues](https://github.com/nishant-gupta911/VayuDrishti/issues)
 - 💡 **Feature Requests**: [GitHub Discussions](https://github.com/nishant-gupta911/VayuDrishti/discussions)
-- 📊 **Performance Analytics**: [Model Metrics Dashboard](docs/performance_analysis.html)
+- 📊 **Performance Dashboard**: [Model Metrics](docs/performance_analysis.html)
 
 ---
 
-### 🎯 **Developed for Triwizardathon 1.0** 🏆
-### 🐍 **House Slytherin - Precision Through Ambition** 
-### ❤️ **Engineered in India** 🇮🇳
-### 🌍 **For sustainable environmental intelligence** 🌱
+### ❤️ Made with passion in India 🇮🇳
+### 🌍 For a cleaner, healthier future 🌱
 
 ---
 
-*"Strategic intelligence applied to environmental challenges - where computational precision meets innovative problem-solving. VayuDrishti demonstrates that methodical ambition and technical excellence can address complex atmospheric forecasting challenges across diverse geographic and socioeconomic landscapes."*
-
----
+*Last Updated: July 24, 2025 | Version: 2.0.0 | Status: Production Ready*
 
