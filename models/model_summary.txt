@@ -1,30 +1,42 @@
-🎯 VayuDrishti PM2.5 Prediction Model Results
-==================================================
+🎯 VayuDrishti PM2.5 Prediction Model - Production Training
+======================================================================
 
 📊 Training Summary:
-   Dataset size: 22 samples
-   Features used: 8
-   Feature list: aod_550, t2m_celsius, wind_speed_10m, r2m, latitude, longitude, hour, month
+   Dataset size: 40983 samples
+   Training set: 32786 samples
+   Test set: 8197 samples
+   Features used: 15
+   Feature list: aod_550, t2m_celsius, wind_speed_10m, r2m, blh, lat_cos, lat_sin, lon_cos, lon_sin, hour, month, season, aod_temp, aod_wind, temp_humidity
 
-🌲 Random Forest Performance:
-   MAE: 9.28 μg/m³
-   RMSE: 12.30 μg/m³
-   R²: 0.708
+🚀 XGBoost Performance (Test Set):
+   R² Score:  0.8999 (90.0%)
+   MAE:       3.90 μg/m³
+   RMSE:      5.31 μg/m³
 
-🚀 XGBoost Performance:
-   MAE: 7.43 μg/m³
-   RMSE: 8.30 μg/m³
-   R²: 0.867
+🔄 Cross-Validation (5-fold):
+   Mean R²:   0.8973 (±0.0081)
+   CV Scores: [0.8824144168987275, 0.9055672061082077, 0.8990798023179817, 0.9030369486402383, 0.8965802281028381]
 
-🔍 Feature Importance (Random Forest):
-   aod_550: 0.869
-   t2m_celsius: 0.085
-   r2m: 0.030
-   wind_speed_10m: 0.008
-   latitude: 0.005
-   month: 0.003
-   longitude: 0.000
-   hour: 0.000
+🔍 Feature Importance:
+   aod_wind: 0.682
+   hour: 0.108
+   blh: 0.059
+   aod_temp: 0.051
+   aod_550: 0.030
+   wind_speed_10m: 0.019
+   temp_humidity: 0.011
+   lon_sin: 0.008
+   r2m: 0.007
+   lat_sin: 0.007
+   lat_cos: 0.007
+   lon_cos: 0.006
+   t2m_celsius: 0.006
+   month: 0.000
+   season: 0.000
 
 💡 Model Insights:
-   • AOD (satellite data) is a strong predictor of PM2.5
+   • aod_wind is the strongest predictor (importance: 0.682)
+   • Model achieves 90.0% accuracy on test data
+   • Average prediction error: ±3.9 μg/m³
+
+📅 Training Date: 2025-11-07 12:05:45

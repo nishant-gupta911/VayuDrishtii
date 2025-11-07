@@ -48,15 +48,15 @@
 
 ### 🔬 **Advanced Data Pipeline**
 - **Multi-Source Integration**: Seamlessly combines satellite, weather, and ground station data
-- **2-Year Historical Dataset**: 100,000+ cleaned and validated records
+- **Comprehensive Dataset**: 130,000+ raw records, 40,000+ training samples  
 - **Quality Assurance**: Comprehensive data preprocessing and outlier detection
-- **Feature Engineering**: 12 optimized variables including geographic and temporal encoding
+- **Feature Engineering**: 15 optimized variables including geographic and temporal encoding
 
 ### 🤖 **Optimized Machine Learning**
-- **High Performance**: XGBoost model achieving R² > 0.88 (88%+ accuracy)
+- **High Performance**: XGBoost model achieving R² = 0.900 (90.0% accuracy)
 - **Fast Inference**: <100ms prediction time for real-time applications
-- **Robust Validation**: K-fold cross-validation and temporal splitting
-- **Lightweight Deployment**: 279KB model size for easy distribution
+- **Robust Validation**: 5-fold cross-validation (89.7% ± 0.8%)
+- **Efficient Deployment**: 106MB model size with 40,000+ training samples
 
 ### 📊 **Interactive Dashboard**
 - **Pan-India Visualization**: Real-time color-coded air quality map
@@ -193,9 +193,10 @@ Minimal dependencies for production dashboard deployment:
 ### 📊 **Model Performance Metrics**
 ```python
 # Prediction Accuracy Results
-R² Score: 0.884          # 88.4% variance explained
-MAE: 12.3 μg/m³          # Mean Absolute Error
-RMSE: 18.7 μg/m³         # Root Mean Square Error
+R² Score: 0.900          # 90.0% variance explained
+MAE: 3.90 μg/m³          # Mean Absolute Error  
+RMSE: 5.31 μg/m³         # Root Mean Square Error
+Cross-Validation: 89.7% ± 0.8%  # 5-fold CV reliability
 Prediction Speed: <100ms  # Real-time inference
 ```
 

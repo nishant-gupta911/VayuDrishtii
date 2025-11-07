@@ -1,19 +1,23 @@
 {
   "best_model": {
     "name": "XGBoost",
-    "mae": 10.200853073781845,
-    "rmse": 12.651110946684929,
-    "r2": 0.8522308421120742,
+    "mae": 3.8969187465352313,
+    "rmse": 5.31270463942653,
+    "r2": 0.8998966959824979,
+    "cv_mean_r2": 0.8973357204135987,
+    "cv_std_r2": 0.008081079741426992,
     "parameters": {
-      "colsample_bytree": 0.9,
-      "learning_rate": 0.1,
-      "max_depth": 3,
-      "n_estimators": 300,
-      "subsample": 0.9
+      "n_estimators": 500,
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
     }
   },
   "dataset_info": {
-    "total_samples": 200,
+    "total_samples": 40983,
+    "train_samples": 32786,
+    "test_samples": 8197,
     "features_used": [
       "aod_550",
       "t2m_celsius",
@@ -26,8 +30,11 @@
       "lon_sin",
       "hour",
       "month",
-      "season"
+      "season",
+      "aod_temp",
+      "aod_wind",
+      "temp_humidity"
     ],
-    "compatibility_fix": "Recreated with current XGBoost version"
+    "training_date": "2025-11-07 12:05:44"
   }
 }

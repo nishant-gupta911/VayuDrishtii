@@ -173,20 +173,29 @@ class OfflineForecast:
                 features['aod_550'] += pollution_trend
                 features['aod_550'] = min(2.0, features['aod_550'])
             
-            # Create feature array for prediction (12 features in correct order)
+            # Create feature array for prediction (15 features in correct order)
+            # Base 12 features + 3 interaction features
+            aod = features['aod_550']
+            temp = features['t2m_celsius']
+            wind = features['wind_speed_10m']
+            humidity = features['r2m']
+            
             feature_array = np.array([[
-                features['aod_550'],
-                features['t2m_celsius'], 
-                features['wind_speed_10m'],
-                features['r2m'],
-                features['blh'],
-                features['lat_cos'],
-                features['lat_sin'],
-                features['lon_cos'],
-                features['lon_sin'],
-                features['hour'],
-                features['month'],
-                features['season']
+                aod,                          # aod_550
+                temp,                         # t2m_celsius  
+                wind,                         # wind_speed_10m
+                humidity,                     # r2m
+                features['blh'],              # blh
+                features['lat_cos'],          # lat_cos
+                features['lat_sin'],          # lat_sin
+                features['lon_cos'],          # lon_cos
+                features['lon_sin'],          # lon_sin
+                features['hour'],             # hour
+                features['month'],            # month
+                features['season'],           # season
+                aod * temp / 100,             # aod_temp interaction
+                aod * (10 - min(wind, 10)),   # aod_wind interaction  
+                temp * humidity / 1000        # temp_humidity interaction
             ]])
             
             # Make prediction with error handling
