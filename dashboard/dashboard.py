@@ -14,60 +14,20 @@ Usage:
     streamlit run dashboard.py
 """
 
-import sys
-import subprocess
-
-# Function to install missing packages
-def install_missing_packages():
-    """Install missing packages automatically"""
-    missing_packages = []
-    
-    try:
-        import streamlit
-    except ImportError:
-        missing_packages.append('streamlit')
-    
-    try:
-        import folium
-    except ImportError:
-        missing_packages.append('folium')
-    
-    try:
-        import plotly
-    except ImportError:
-        missing_packages.append('plotly')
-    
-    try:
-        from streamlit_folium import st_folium
-    except ImportError:
-        missing_packages.append('streamlit-folium')
-    
-    if missing_packages:
-        print(f"📦 Installing missing packages: {', '.join(missing_packages)}")
-        for package in missing_packages:
-            try:
-                subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-                print(f"✅ Installed {package}")
-            except subprocess.CalledProcessError:
-                print(f"❌ Failed to install {package}")
-                print(f"Please install manually: pip install {package}")
-                sys.exit(1)
-        
-        print("🔄 Please restart the dashboard after installation")
-        sys.exit(0)
-
-# Install missing packages if needed
-install_missing_packages()
-
-# Now import all required packages
-import streamlit as st
+try:
+    import streamlit as st
+    import plotly.express as px
+    import plotly.graph_objects as go
+    import folium
+    from streamlit_folium import st_folium
+except ImportError as exc:
+    raise SystemExit(
+        "Missing dashboard dependencies. Install them with "
+        "`pip install -r dashboard/requirements_dashboard.txt`."
+    ) from exc
 import pandas as pd
 import numpy as np
-import plotly.express as px
-import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import folium
-from streamlit_folium import st_folium
 # Removed requests import - running in offline mode
 import json
 from datetime import datetime, timedelta, date
@@ -1004,7 +964,7 @@ class VayuDrishtiDashboard:
                             st.error(f"⚠️ **High pollution alert for {worst_date}** - Consider staying indoors")
                     else:
                         st.error("❌ Offline forecast model not available")
-                        st.info("Please ensure best_model.pkl is in the models/ directory")
+                        st.info("Please ensure the canonical model bundle exists at models/pm25_clean_bundle.joblib")
                         
                 except Exception as e:
                     st.error("� **Prediction Error**")
@@ -1012,7 +972,7 @@ class VayuDrishtiDashboard:
                     
                     if not OFFLINE_FORECAST_AVAILABLE:
                         st.warning("⚠️ **Offline forecast model not available**")
-                        st.info("📝 **Note**: Please ensure best_model.pkl is in the models/ directory.")
+                        st.info("📝 **Note**: Please ensure the canonical model bundle exists at models/pm25_clean_bundle.joblib.")
     
     def run_dashboard(self):
         """Main dashboard function"""
@@ -1295,7 +1255,7 @@ class VayuDrishtiDashboard:
                                 st.markdown(f"- {rec}")
                         else:
                             st.error("❌ Offline prediction model not available")
-                            st.info("Please ensure best_model.pkl is in the project directory")
+                            st.info("Please ensure the canonical model bundle exists at models/pm25_clean_bundle.joblib")
                             
                     except Exception as e:
                         st.error(f"� **Prediction Error**")
@@ -1304,7 +1264,7 @@ class VayuDrishtiDashboard:
                         st.markdown("### 🛠️ **Model Status:**")
                         st.markdown("""
                         **Offline Mode Requirements:**
-                        - Ensure `best_model.pkl` exists in the project directory
+                        - Ensure `models/pm25_clean_bundle.joblib` exists
                         - Model file should be trained XGBoost model
                         - Check console for loading errors
                         """)
