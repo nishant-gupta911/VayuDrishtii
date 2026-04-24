@@ -1,0 +1,40 @@
+{
+  "model_type": "XGBoost (Final Optimized)",
+  "features": [
+    "latitude",
+    "longitude",
+    "pm10",
+    "month",
+    "hour",
+    "lat_lon_interaction",
+    "month_sin",
+    "month_cos",
+    "hour_sin",
+    "hour_cos",
+    "dist_delhi"
+  ],
+  "num_features": 11,
+  "test_r2": 0.9919240845386283,
+  "test_rmse": 6.838925465066432,
+  "test_mae": 4.227707198935301,
+  "test_mape": 8.877787059177212,
+  "test_accuracy_10percent": 79.65399711664264,
+  "boosting_rounds": 596,
+  "training_samples": 479996,
+  "test_samples": 119999,
+  "data_source": "Real verified CPCB/WAQI/IIT data with satellite AOD features",
+  "hyperparameters": {
+    "max_depth": 12,
+    "eta": 0.015,
+    "subsample": 0.95,
+    "colsample_bytree": 0.95,
+    "min_child_weight": 2,
+    "gamma": 0.1,
+    "lambda": 0.5,
+    "alpha": 0.3,
+    "objective": "reg:squarederror",
+    "seed": 42,
+    "eval_metric": "rmse"
+  },
+  "training_status": "Deployed"
+}
